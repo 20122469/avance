@@ -1,19 +1,28 @@
-agregar = document.getElementById('agregar')
-recordatorio = document.getElementById('recordatorio')
-especialidad = document.getElementById('especialidad')
-dias = ['Lunes','Martes','Miércoles','Jueves','Viernes','Sábado','Domingo']
-modalidad = ['Presencial','Online']
-especialidades =['Ginecólogo','Pediatra','Dermatólogo','Traumatólogo y ortopedista','Gastroenterólogo','Cirujano general','Psiquiatra','Oftalmólogo','Neurólogo','Urólogo','Otorrino','Endocrinólogo','Cardiólogo','Neurocirujano','Cirujano Plástico','Internista','Neumólogo','Reumatólogo','Médico General','Cirujano Cardiovascular y Torácico','Dentista','Nefrólogo','Nutricionista','Oncólogo','Cirujano Maxilofacial','Hematólogo','Geriatra','Especialista en Medicina Física y Rehabilitación','Neumólogo Pediátrico','Alergista','Neonatólogo','Radiólogo','Anestesiólogo','Cirujano Pediátrico','Infectólogo','Especialista En Medicina Intensiva','Especialista En Administración De Salud','Neurofisiólogo Clínico','Patólogo Clínico','Especialista en Emergencias','Especialista En Medicina Estética','Quiropráctico','Fisioterapeuta','Terapeuta Complementario','Médico Legal','Médico Familiar','Genetista','Fonoaudiólogo','Epidemiólogo','Cirujano Vascular','Especialista En Medicina Nuclear','Médico Del Trabajo','Bioquímico','Médico Ocupacional','Especialista En Salud Pública','Homeópata','Farmacólogo','Médico Del Deporte','Podólogo','Especialista En Medicina Natural','Técnico En Laboratorio Clínico','Enfermero','Especialista En Radioterapia','Óptico']
+window.addEventListener("load", _ => {
 
-for (let a=0; a<especialidades.length;a++) {
-  option3 = document.createElement('option')
-  option3.setAttribute('value',especialidades[a])
-  option3.textContent = especialidades[a]
-  especialidad.appendChild(option3)
-}
+  const agregar = document.getElementById('agregar')
+  const recordatorio = document.getElementById('recordatorio')
+  const especialidad = document.getElementById('especialidad')
+  
+  let dias = ['Lunes','Martes','Miércoles','Jueves','Viernes','Sábado','Domingo']
+  let modalidad = ['Presencial','Online']
+  let especialidades =['Ginecólogo','Pediatra','Dermatólogo','Traumatólogo y ortopedista','Gastroenterólogo','Cirujano general','Psiquiatra','Oftalmólogo','Neurólogo','Urólogo','Otorrino','Endocrinólogo','Cardiólogo','Neurocirujano','Cirujano Plástico','Internista','Neumólogo','Reumatólogo','Médico General','Cirujano Cardiovascular y Torácico','Dentista','Nefrólogo','Nutricionista','Oncólogo','Cirujano Maxilofacial','Hematólogo','Geriatra','Especialista en Medicina Física y Rehabilitación','Neumólogo Pediátrico','Alergista','Neonatólogo','Radiólogo','Anestesiólogo','Cirujano Pediátrico','Infectólogo','Especialista En Medicina Intensiva','Especialista En Administración De Salud','Neurofisiólogo Clínico','Patólogo Clínico','Especialista en Emergencias','Especialista En Medicina Estética','Quiropráctico','Fisioterapeuta','Terapeuta Complementario','Médico Legal','Médico Familiar','Genetista','Fonoaudiólogo','Epidemiólogo','Cirujano Vascular','Especialista En Medicina Nuclear','Médico Del Trabajo','Bioquímico','Médico Ocupacional','Especialista En Salud Pública','Homeópata','Farmacólogo','Médico Del Deporte','Podólogo','Especialista En Medicina Natural','Técnico En Laboratorio Clínico','Enfermero','Especialista En Radioterapia','Óptico']
+  
+  for (let a=0; a<especialidades.length;a++) {
+    const option3 = document.createElement('option')
+    option3.setAttribute('value',especialidades[a])
+    option3.textContent = especialidades[a]
+    //ERROR!
+    // especialidad.appendChild(option3)
+  }
 
-agregar.addEventListener('click', () => {
-    console.log("hola")
+    //ERROR!
+  // recordatorio.addEventListener('click', () =>{
+  //   alert("Recordatorio enviado.");
+  // })
+
+  agregar.addEventListener('click', () => {
+
     container = document.getElementById("container")
 
     select = document.createElement('select')
@@ -56,8 +65,8 @@ agregar.addEventListener('click', () => {
     
 })
 
-recordatorio.addEventListener('click', () =>{
-  alert("Recordatorio enviado.");
-})
 
+});
 
+  
+  
